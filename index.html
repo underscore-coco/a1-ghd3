@@ -2,12 +2,106 @@
 <div id="container"></div>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script type="module">
-
-<script>
   console.log(d3); // test if d3 is loaded
-  // Add an SVG
-  // Add Rectangles
-  // Add Circles
-  // Add Lines
-  // Add Polygons
+
+  // ______________________________ SVG ______________________________
+  const svg = d3.select("#container")
+    .append("svg")
+    .attr("width", 800)
+    .attr("height", 600)
+    .style("border", "1px solid black")
+    .style("background-color", "darkgray");
+
+  // ______________________________ Rectangles ______________________________
+  svg.append("rect")
+    .attr("x", 70)
+    .attr("y", 50)
+    .attr("width", 150)
+    .attr("height", 110)
+    .attr("fill", "white")
+    .style("border", "2px solid black");
+  
+  let c = d3.color("lightblue");
+  c.opacity = 0.5;
+  
+  svg.append("rect")
+    .attr("x", 70)
+    .attr("y", 30)
+    .attr("width", 150)
+    .attr("height", 150)
+    .attr("fill", c)
+    .style("border", "2px solid black");
+
+  svg.append("rect")
+    .attr("x", 90)
+    .attr("y", 30)
+    .attr("width", 110)
+    .attr("height", 150)
+    .attr("fill", "white")
+    .style("border", "2px solid black");
+  
+
+  // ______________________________ Circles ______________________________
+  svg.append("circle")
+    .attr("cx", 500)
+    .attr("cy", 150)
+    .attr("r", 80)
+    .attr("fill", "white")
+    .style("border", "2px solid black");
+  
+  
+  // ______________________________ Lines ______________________________
+  svg.append("line")
+    .attr("x1", 70)
+    .attr("y1", 30)
+    .attr("x2", 220)
+    .attr("y2", 180)
+    .attr("stroke", "goldenrod")
+    .attr("stroke-width", 1);
+
+  svg.append("line")
+    .attr("x1", 70)
+    .attr("y1", 180)
+    .attr("x2", 220)
+    .attr("y2", 30)
+    .attr("stroke", "goldenrod")
+    .attr("stroke-width", 1);
+
+    svg.append("line")
+    .attr("x1", 70)
+    .attr("y1", 30)
+    .attr("x2", 220)
+    .attr("y2", 30)
+    .attr("stroke", "goldenrod")
+    .attr("stroke-width", 1);
+
+    svg.append("line")
+    .attr("x1", 220)
+    .attr("y1", 180)
+    .attr("x2", 220)
+    .attr("y2", 30)
+    .attr("stroke", "goldenrod")
+    .attr("stroke-width", 1);
+
+    svg.append("line")
+    .attr("x1", 70)
+    .attr("y1", 180)
+    .attr("x2", 220)
+    .attr("y2", 180)
+    .attr("stroke", "goldenrod")
+    .attr("stroke-width", 1);
+
+    svg.append("line")
+    .attr("x1", 70)
+    .attr("y1", 180)
+    .attr("x2", 70)
+    .attr("y2", 30)
+    .attr("stroke", "goldenrod")
+    .attr("stroke-width", 1);
+  
+
+
+  
+  // ______________________________ Polygons ______________________________
+  
 </script>
