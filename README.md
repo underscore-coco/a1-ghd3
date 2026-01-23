@@ -12,7 +12,7 @@ The first I just combined a few rectangles and lines to make a shape. This is my
 <img width="201" height="202" alt="image1" src="https://github.com/user-attachments/assets/2c0cdf00-900f-4f3b-9405-8cf9b42f00f2" />
 
 
-Second was a recreation of the zia sun symbol on the new mexico flag. I wanted to see if I could make something recognizable out of just shapes. I used a circle, polygons for the sun rays, and a rectangle for the background.
+Second was a recreation of the zia sun symbol on the new mexico flag. I wanted to see if I could make something recognizable out of just shapes. I used a circle, polygons for the sun rays, and a rectangle for the background. 
 <img width="290" height="290" alt="image2" src="https://github.com/user-attachments/assets/5205bb8b-31da-4d59-8e20-1b058e458396" />
 
 
