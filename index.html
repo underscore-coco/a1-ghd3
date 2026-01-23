@@ -9,7 +9,6 @@
     .append("svg")
     .attr("width", 800)
     .attr("height", 600)
-    .style("border", "1px solid black")
     .style("background-color", "darkgray");
 
   // ______________________________ Rectangles ______________________________
@@ -19,7 +18,8 @@
     .attr("width", 150)
     .attr("height", 110)
     .attr("fill", "white")
-    .style("border", "2px solid black");
+    .attr("stroke", "red")
+    .attr("stroke-width", 2);
   
   let c = d3.color("lightblue");
   c.opacity = 0.5;
@@ -37,15 +37,6 @@
     .attr("y", 30)
     .attr("width", 110)
     .attr("height", 150)
-    .attr("fill", "white")
-    .style("border", "2px solid black");
-  
-
-  // ______________________________ Circles ______________________________
-  svg.append("circle")
-    .attr("cx", 500)
-    .attr("cy", 150)
-    .attr("r", 80)
     .attr("fill", "white")
     .style("border", "2px solid black");
   
@@ -98,10 +89,200 @@
     .attr("y2", 30)
     .attr("stroke", "goldenrod")
     .attr("stroke-width", 1);
+
+  
+  
   
 
 
   
-  // ______________________________ Polygons ______________________________
+  // ______________________________ Zia symbol (rectangle, polygons, circle) ______________________________
+  // I combined these to recreate the new mexico sun symbol. I just wanted a pretty symbol to draw and that was the first that came to mind.
+
+  let c2 = d3.color("#FFD801");
+  let c3 = d3.color("#BA0B32");
+
+  svg.append("rect")
+    .attr("x", 300)
+    .attr("y", 50)
+    .attr("width", 240)
+    .attr("height", 240)
+    .attr("fill", c2);
+
+
+  
+  let x1 = 420;
+  let y1 = 170;
+  svg.append("polygon")
+    .attr("points", `${x1-13},${y1-15} ${x1-13},${y1-60} ${x1-16},${y1-65} ${x1-18},${y1-60} ${x1-18},${y1-10}`)
+    .attr("fill", c3);
+  svg.append("polygon")
+    .attr("points", `${x1-13},${y1+15} ${x1-13},${y1+60} ${x1-16},${y1+65} ${x1-18},${y1+60} ${x1-18},${y1+10}`)
+    .attr("fill", c3);
+  svg.append("polygon")
+    .attr("points", `${x1+13},${y1-15} ${x1+13},${y1-60} ${x1+16},${y1-65} ${x1+18},${y1-60} ${x1+18},${y1-10}`)
+    .attr("fill", c3);
+  svg.append("polygon")
+    .attr("points", `${x1+13},${y1+15} ${x1+13},${y1+60} ${x1+16},${y1+65} ${x1+18},${y1+60} ${x1+18},${y1+10}`)
+    .attr("fill", c3);
+  
+
+  svg.append("polygon")
+    .attr("points", `${x1-3},${y1-20} ${x1-3},${y1-80} ${x1-6},${y1-85} ${x1-9},${y1-80} ${x1-9},${y1-18}`)
+    .attr("fill", c3);
+  svg.append("polygon")
+    .attr("points", `${x1-3},${y1+20} ${x1-3},${y1+80} ${x1-6},${y1+85} ${x1-9},${y1+80} ${x1-9},${y1+18}`)
+    .attr("fill", c3);
+  svg.append("polygon")
+    .attr("points", `${x1+3},${y1-20} ${x1+3},${y1-80} ${x1+6},${y1-85} ${x1+9},${y1-80} ${x1+9},${y1-18}`)
+    .attr("fill", c3);
+  svg.append("polygon")
+    .attr("points", `${x1+3},${y1+20} ${x1+3},${y1+80} ${x1+6},${y1+85} ${x1+9},${y1+80} ${x1+9},${y1+18}`)
+    .attr("fill", c3);
+
+
+svg.append("polygon")
+  .attr("points", `${x1-15},${y1-13} ${x1-60},${y1-13} ${x1-65},${y1-16} ${x1-60},${y1-18} ${x1-10},${y1-18}`)
+  .attr("fill", c3);
+svg.append("polygon")
+  .attr("points", `${x1+15},${y1-13} ${x1+60},${y1-13} ${x1+65},${y1-16} ${x1+60},${y1-18} ${x1+10},${y1-18}`)
+  .attr("fill", c3);
+svg.append("polygon")
+  .attr("points", `${x1-15},${y1+13} ${x1-60},${y1+13} ${x1-65},${y1+16} ${x1-60},${y1+18} ${x1-10},${y1+18}`)
+  .attr("fill", c3);
+svg.append("polygon")
+  .attr("points", `${x1+15},${y1+13} ${x1+60},${y1+13} ${x1+65},${y1+16} ${x1+60},${y1+18} ${x1+10},${y1+18}`)
+  .attr("fill", c3);
+
+
+svg.append("polygon")
+  .attr("points", `${x1-20},${y1-3} ${x1-80},${y1-3} ${x1-85},${y1-6} ${x1-80},${y1-9} ${x1-18},${y1-9}`)
+  .attr("fill", c3);
+svg.append("polygon")
+  .attr("points", `${x1+20},${y1-3} ${x1+80},${y1-3} ${x1+85},${y1-6} ${x1+80},${y1-9} ${x1+18},${y1-9}`)
+  .attr("fill", c3);
+svg.append("polygon")
+  .attr("points", `${x1-20},${y1+3} ${x1-80},${y1+3} ${x1-85},${y1+6} ${x1-80},${y1+9} ${x1-18},${y1+9}`)
+  .attr("fill", c3);
+svg.append("polygon")
+  .attr("points", `${x1+20},${y1+3} ${x1+80},${y1+3} ${x1+85},${y1+6} ${x1+80},${y1+9} ${x1+18},${y1+9}`)
+  .attr("fill", c3);
+
+
+svg.append("circle")
+  .attr("cx", x1)
+  .attr("cy", y1)
+  .attr("r", 25)
+  .attr("fill", c2)
+  .attr("stroke", c3)
+  .attr("stroke-width", 4);
+
+// ______________________________ Better? Zia With Paths ______________________________
+
+let x2  = 420;
+let y2 = 470;
+
+svg.append("rect")
+    .attr("x", 300)
+    .attr("y", 350)
+    .attr("width", 240)
+    .attr("height", 240)
+    .attr("fill", c2);
+
+// a slightly better way to draw the sun rays using paths
+function drawVerticalRay(x, y, width, length) {
+  const path = d3.path();
+  path.moveTo(x - width/2, y); // bottom left
+  path.lineTo(x - width/2, y - length * 0.8); // left side
+  path.quadraticCurveTo(x, y - length, x + width/2, y - length * 0.8); // top curve
+  path.lineTo(x + width/2, y-length*0.1); // right side
+  path.closePath(); // back to bottom left
+  
+  return path.toString();
+}
+
+// had to make a separate function for horizontal rays. just swapped x and y coords
+function drawHorizontalRay(x, y, width, length) {
+  const path = d3.path();
+  path.moveTo(x, y - width/2);
+  path.lineTo(x + length * 0.8, y - width/2);
+  path.quadraticCurveTo(x + length, y, x + length * 0.8, y + width/2);
+  path.lineTo(x, y + width/2);
+  path.closePath();
+  
+  return path.toString();
+}
+
+// up
+svg.append("path")
+  .attr("d", drawVerticalRay(x2-4, y2 - 20, 5, 60))
+  .attr("fill", c3);
+svg.append("path")
+  .attr("d", drawVerticalRay(x2-12, y2 - 10, 5, 60))
+  .attr("fill", c3);
+
+svg.append("path")
+  .attr("d", drawVerticalRay(x2+4, y2 - 20, -5, 60))
+  .attr("fill", c3);
+svg.append("path")
+  .attr("d", drawVerticalRay(x2+12, y2 - 10, -5, 60))
+  .attr("fill", c3);
+
+// down
+svg.append("path")
+  .attr("d", drawVerticalRay(x2-4, y2 + 20, 5, -60))
+  .attr("fill", c3);
+svg.append("path")
+  .attr("d", drawVerticalRay(x2-12, y2 + 10, 5, -60))
+  .attr("fill", c3);
+
+svg.append("path")
+  .attr("d", drawVerticalRay(x2+4, y2 + 20, -5, -60))
+  .attr("fill", c3);
+svg.append("path")
+  .attr("d", drawVerticalRay(x2+12, y2 + 10, -5, -60))
+  .attr("fill", c3);
+
+// left
+svg.append("path")
+  .attr("d", drawHorizontalRay(x2 - 20, y2 - 4, 5, -60))
+  .attr("fill", c3);
+svg.append("path")
+  .attr("d", drawHorizontalRay(x2 - 10, y2 - 12, 5, -60))
+  .attr("fill", c3);
+
+svg.append("path")
+  .attr("d", drawHorizontalRay(x2 - 20, y2 + 4, -5, -60))
+  .attr("fill", c3);
+svg.append("path")
+  .attr("d", drawHorizontalRay(x2 - 10, y2 + 12, -5, -60))
+  .attr("fill", c3);
+
+// right
+svg.append("path")
+  .attr("d", drawHorizontalRay(x2 + 20, y2 - 4, 5, 60))
+  .attr("fill", c3);
+svg.append("path")
+  .attr("d", drawHorizontalRay(x2 + 10, y2 - 12, 5, 60))
+  .attr("fill", c3);
+  
+svg.append("path")
+  .attr("d", drawHorizontalRay(x2 + 20, y2 + 4, -5, 60))
+  .attr("fill", c3);
+svg.append("path")
+  .attr("d", drawHorizontalRay(x2 + 10, y2 + 12, -5, 60))
+  .attr("fill", c3);
+
+
+
+
+svg.append("circle")
+    .attr("cx", x2)
+    .attr("cy", y2)
+    .attr("r", 25)
+    .attr("fill", c2)
+    .attr("stroke", c3)
+    .attr("stroke-width", 4);
+  
   
 </script>
